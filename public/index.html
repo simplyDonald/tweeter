@@ -6,24 +6,79 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,600&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/header.css" type="text/css">
+    <link rel="stylesheet" href="/styles/new-tweet.css">
+    <link rel="stylesheet" href="/styles/article.css">
+    <!-- timeago cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.css" integrity="sha512-OodagY/LAbXf1TAkypAk+8OWjR+wGA8k3H7TGH+gku7+VsOmJRCQ2pTQJoTo/bATGwTOFdypCXqMV8snRZkC+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav id="navbar">
+      <div id="logo"><span>tweeter</span></div>
+      <div class="nav-text-container">
+        <div class="nav-text"><span><b>Write</b> a new tweet</span></div>
+        <div id="icon">
+            <button id="btn"><i class="fas fa-angle-double-down faa-float animated faa-fast"></i></button>
+        </div>
+      </div>
     </nav>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <div id="responsive-container">
+      <header id="header">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <span><strong>Lucy</strong> Jones</span>
+        </div>
+      </header>
+    
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <form method="POST" action="/tweets/" id="tweet-form">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div id="form-items">
+              <button type="submit" id="form-btn">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="error-message">
+          <p id="empty-value">
+            <i class="fas fa-exclamation-triangle"></i> Please enter a tweet <i class="fas fa-exclamation-triangle"></i>
+          </p>
+          <p id="long-tweet">
+            <i class="fas fa-exclamation-triangle"></i> Your tweet is too long <i class="fas fa-exclamation-triangle"></i>
+          </p>
+        </section>
+        <section class="fresh-tweets">
+  
+        </section>
+  
+      </main>
+    </div>
+    
   </body>
 </html>
