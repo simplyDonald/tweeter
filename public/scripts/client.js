@@ -8,21 +8,21 @@ const createTweetElement = (tweetObj) =>{
   const img = tweetObj.user.avatars;
   const timeAgo = timeago.format(tweetObj.created_at); 
   const $template = $(
-    `<article id="tweet-card">
-      <div class="article-header">
-      <div class="img-sub">
-        <div><img src="${img}" alt="profile-pic" width="30px"></div>
-        <div id="name">${tweetObj.user.name}</div>
+    `<article id='tweet-card'>
+      <div class='article-header'>
+      <div class='img-sub'>
+        <div><img src='${img}' alt='profile-pic' width='30px'></div>
+        <div id='name'>${tweetObj.user.name}</div>
       </div>
-      <div id="user-handle">${tweetObj.user.handle}</div>
+      <div id='user-handle'>${tweetObj.user.handle}</div>
       </div>
-      <span id="article-tweet">${tweetObj.content.text}</span>
-      <footer id="article-footer">
-        <div id="article-date">${timeAgo}</div>
-        <div class="icons">
-          <i class="far fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
+      <span id='article-tweet'>${tweetObj.content.text}</span>
+      <footer id='article-footer'>
+        <div id='article-date'>${timeAgo}</div>
+        <div class='icons'>
+          <i class='far fa-flag'></i>
+          <i class='fas fa-retweet'></i>
+          <i class='fas fa-heart'></i>
         </div>
       </footer>
     </article>`);
@@ -43,13 +43,11 @@ const renderTweets = (tweets) =>{
 $(function() {
   // Handler for .ready() called.
   let $counter = $(this).find('.counter');
-  let $tweetText = $(this).find('textarea');
-  console.log(`counter-------->`,$counter.val());
   $('#btn').on('click',function(){
     $('#tweet-form').slideToggle('fast');
     $('#tweet-text').focus();
   });
-  $( "#tweet-form" ).submit(function( event ) {
+  $( '#tweet-form' ).submit(function( event ) {
     event.preventDefault();
     if (!event.target.text.value) {
       $('#long-tweet').css('display','none');
