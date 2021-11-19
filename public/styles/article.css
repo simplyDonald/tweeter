@@ -1,0 +1,78 @@
+#tweet-card {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  padding: 10px;
+  border: 3px solid black;
+}
+
+#form-btn {
+  cursor: pointer;
+}
+
+#tweet-card:hover {
+  box-shadow: 8px 11px 10px 0px #000000;
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-sub {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.fa-flag:hover {
+  color: goldenrod;
+}
+
+.fa-retweet:hover {
+  color: goldenrod;
+}
+
+.fa-heart:hover {
+  color: goldenrod;
+}
+
+.icons {
+  font-size: 0.5em;
+}
+
+#name {
+  margin-left: 10px;
+}
+
+#article-date {
+  font-size: 0.5em;
+}
+
+#article-tweet {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 3px solid black;
+}
+
+#article-footer {
+  margin-top: 10px;
+}
+
+#name {
+  font-size: 0.8em;
+  align-self: center;
+}
+
+#user-handle {
+  font-size: 0.8em;
+  align-self: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}

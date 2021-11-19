@@ -1,0 +1,34 @@
+nav {
+  display: flex;
+  padding: 1.5em;
+  height: 120px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #daa520;
+  color: #FFFFFF;
+  justify-content: space-between;
+  z-index: 10;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+}
+nav #logo {
+  font-family: "Bungee", cursive, sans-serif;
+}
+nav .nav-text {
+  font-size: 0.8em;
+}
+nav .nav-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav #btn {
+  font-size: 0.6em;
+  color: red;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
