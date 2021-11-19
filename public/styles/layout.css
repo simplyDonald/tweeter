@@ -28,20 +28,10 @@ main {
   margin: 0 auto;
 }
 
-/* @media (min-width: 768px) and (max-width: 1024px){
-  #navbar {
-    background-color: #daa520;
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+#tweet-form {
+  display: none;
+}
 
-  .nav-text-container {
-    padding-right: 25px;
-  }
-
-
-} */
 @media only screen and (min-width: 768px) {
   /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
   #responsive-container {

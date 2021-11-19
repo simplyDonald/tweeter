@@ -43,7 +43,12 @@ const renderTweets = (tweets) =>{
 $(function() {
   // Handler for .ready() called.
   let $counter = $(this).find('.counter');
+  let $tweetText = $(this).find('textarea');
   console.log(`counter-------->`,$counter.val());
+  $('#btn').on('click',function(){
+    $('#tweet-form').slideToggle('fast');
+    $('#tweet-text').focus();
+  });
   $( "#tweet-form" ).submit(function( event ) {
     event.preventDefault();
     if (!event.target.text.value) {
