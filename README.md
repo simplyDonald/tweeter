@@ -25,6 +25,6 @@ Have Fun!
 
 
 ## Screenshots
-!["Screenshots of home page"]()
-!["Screenshots of tweets"]()
-!["View of mobile responsive home page"]()
+!["Screenshots of home page"](https://github.com/simplyDonald/tweeter/blob/master/docs/tweeter_snap1.png)
+!["Screenshots of tweets"](https://github.com/simplyDonald/tweeter/blob/master/docs/tweeter-snap2.png)
+!["View of mobile responsive home page"](https://github.com/simplyDonald/tweeter/blob/master/docs/tweeter-snap3.png)
